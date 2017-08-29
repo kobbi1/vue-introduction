@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title>Vue Introduction</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.css">
+</head>
+<body>
+
+	<div class="field" id="app">
+  		<h1 class="title">Vue Introduction</h1>
+  		<div class="control">
+    		<input class="input" type="text" placeholder="Fyrsta Nafn" v-model="fName">
+  		</div>
+  		<br>
+  		<div class="control">
+  			<input class="input" type="text" placeholder="Eftir Nafn" v-model="lName">
+  		</div>
+  		<br>
+  		<p v-text=" 'Nafnið þitt er:' + ' ' + fName + ' ' + lName"></p>
+	</div>
+
+
+
+	<script src="https://unpkg.com/vue"></script>
+
+	<script type="text/javascript">
+		
+		var app = new Vue({
+			el: "#app",
+			data: {
+				fName: "",
+				lName: ""
+			}
+		});
+
+	</script>
+</body>
+</html>

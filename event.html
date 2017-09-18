@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title></title>
+</head>
+<body>
+
+	<div id="root">
+		
+		<p v-text="counter"></p>
+		<button v-if="counter < 10"@click="addOne">Hækka um einn</button>
+		<button v-if="counter > -10"@click="minusOne">Lækka um einn</button>
+
+	</div>
+
+
+<script src="https://unpkg.com/vue"></script>
+<script type="text/javascript">
+	var root = new Vue({
+		el: "#root",
+		data: {
+			counter:0
+
+		},
+		methods: {
+			addOne:function() {
+				this.counter += 1
+				if(this.counter >= 10) {
+					this.counter = 10
+
+				}
+			},
+			minusOne:function() {
+				this.counter -= 1
+				if(this.counter <= -10) {
+					this.counter = -10
+				}
+
+			}
+
+		}
+	})
+
+</script>
+</body>
+</html>

@@ -15,11 +15,12 @@
     		<input class="input" type="text" placeholder="Fyrsta Nafn" v-model="fName">
   		</div>
   		<br>
-  		<div class="control">
-  			<input class="input" type="text" placeholder="Eftir Nafn" v-model="lName">
-  		</div>
-  		<br>
-  		<p v-text=" 'Nafnið þitt er:' + ' ' + fName + ' ' + lName"></p>
+
+
+  		<p v-if="fName">Nafnið mitt er: {{ fName }} </p>
+  		<p v-bind:id="id">Þessi texti hefur ID</p>
+
+
 	</div>
 
 
@@ -32,7 +33,8 @@
 			el: "#app",
 			data: {
 				fName: "",
-				lName: ""
+				id:3
+
 			}
 		});
 
